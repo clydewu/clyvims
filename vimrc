@@ -64,6 +64,10 @@ filetype plugin indent on
 " pathgen }
 
 
+" pydiction {
+let g:pydiction_location = '~/.vim/bundle/pydiction/ftplugin/pydiction/complete-dict' 
+" pydiction }
+
 
 " autocomplpop {
 let g:acp_completeoptPreview = 1
