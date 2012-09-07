@@ -84,5 +84,12 @@
 " autocomplpop }
 
 " vim-flake8 {
+    let g:flake8_cmd="/usr/bin/flake8"
+    let g:pyflakes_use_quickfix = 0
     let g:flake8_ignore="E501"
 " vim-flake8 }
+
+
+" syntastic {
+    let g:syntastic_python_checker_args="--ignore=E501"
+" syntastic }
