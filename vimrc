@@ -48,7 +48,12 @@
 " pathgen }
 
 
-"for python {
+" for c/cpp {
+    autocmd FileType c,cpp setlocal cindent fdm=syntax
+" for c/cpp }
+
+
+" for python {
     filetype plugin indent on
     autocmd FileType python setlocal et sta sw=4 sts=4
     "fold
@@ -59,7 +64,7 @@
         let curdir = substitute(getcwd(), $HOME, "~", "")
         return curdir
     endfunction
-"for python }
+" for python }
 
 
 " Omni Complete {
@@ -85,8 +90,9 @@
     inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 " autocomplpop }
 
+
 " vim-flake8 {
-    let g:flake8_cmd="/usr/bin/flake8"
+    " let g:flake8_cmd="/usr/bin/flake8"
     let g:pyflakes_use_quickfix = 0
     let g:flake8_ignore="E501"
 " vim-flake8 }
@@ -102,3 +108,8 @@
     "let g:syntastic_python_checker = 'flake8'
     "let g:syntastic_python_checker_args="--ignore=E501"
 " syntastic }
+
+
+" tagbar {
+    nmap <F8> :TagbarToggle<CR>
+" tagbar }

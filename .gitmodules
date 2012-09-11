@@ -7,6 +7,9 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/python-fold"]
+	path = bundle/python-fold
+	url = http://github.com/vim-scripts/python_fold
 [submodule "bundle/present"]
 	path = bundle/present
-	url = https://github.com/pct/present.vim
+	url = https://github.com/pct/present.vim.git
