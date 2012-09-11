@@ -17,7 +17,7 @@
     syntax on " syntax highlight
     set hlsearch " search highlighting
     filetype on
-    au BufNewFile,BufRead *.cflow setf cflow
+    autocmd BufNewFile,BufRead *.cflow setf cflow
     " cursorline highlight
     highlight Cursorline ctermfg=none ctermbg=darkblue cterm=none
 "basic setup }
@@ -41,6 +41,7 @@
 
 	
 " pathgen {
+    let g:pathogen_disabled=['pydiction-1.2']
     call pathogen#infect()
     syntax on
     filetype plugin indent on
@@ -64,6 +65,7 @@
 " Omni Complete {
     " set auto close ref-window when leave insert-mode
     autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+    autocmd FileType python set omnifunc=pythoncomplete#Complete
 " Omni Complete }
 
 
@@ -91,5 +93,12 @@
 
 
 " syntastic {
-    let g:syntastic_python_checker_args="--ignore=E501"
+    " for pylint
+    let g:syntastic_python_checker = 'pylint'
+    let g:syntastic_python_checker_args="--disable=C0112,C0111,C0301"
+    let g:syntastic_python_checker_args = g:syntastic_python_checker_args." --max-line-length=80"
+
+    " for flake8
+    "let g:syntastic_python_checker = 'flake8'
+    "let g:syntastic_python_checker_args="--ignore=E501"
 " syntastic }
