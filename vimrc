@@ -41,7 +41,7 @@
 
 	
 " pathgen {
-    let g:pathogen_disabled=['pydiction-1.2']
+    let g:pathogen_disabled=['pydiction-1.2', 'python-fold']
     call pathogen#infect()
     syntax on
     filetype plugin indent on
