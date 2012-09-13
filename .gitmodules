@@ -13,3 +13,6 @@
 [submodule "bundle/present"]
 	path = bundle/present
 	url = https://github.com/pct/present.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
