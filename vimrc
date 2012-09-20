@@ -12,6 +12,7 @@
     set showcmd
     set number
     nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+    nnoremap <F3> :set nopaste!<CR>
     " auto reload vimrc when editing it
     autocmd! bufwritepost .vimrc source ~/.vimrc
     syntax on " syntax highlight
